@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:hover {
+  color: hsl(161, 100%, 54%);
+  cursor: pointer;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -40%;
+  left: 0;
+  background-color: #00df9a;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 9999s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
+
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: hsl(222,18%,15%);        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(222,18%,15%);    /* color of the scroll thumb */
+  border-radius: .4em;       /* roundness of the scroll thumb */
+  border: 1px solid hsl(215, 20%, 35%);  /* creates padding around scroll thumb */
+}
+
+
+
+.custom-scroll::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: hsl(222,18%,15%);        /* color of the tracking area */
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: hsl(222,18%,15%);    /* color of the scroll thumb */
+  border-radius: .4em;       /* roundness of the scroll thumb */
+  border: 1px solid hsl(215, 20%, 35%);  /* creates padding around scroll thumb */
+}
